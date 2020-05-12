@@ -1,6 +1,3 @@
-import puppeteer from 'puppeteer';
-import { launchBrowser } from './launchBrowser';
-
 class PuppeteerHelper {
   constructor (args) {
     const { browser } = args;
@@ -12,10 +9,6 @@ class PuppeteerHelper {
   async visit (url) {
     this.page = await this.browser.newPage();
     await this.page.goto(url);
-  }
-
-  async getCurrentPage () {
-    return (await this.browser.pages())[0];
   }
 
   async close () {

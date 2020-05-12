@@ -1,7 +1,7 @@
 {
   "name": "puppeteer-helper",
   "version": "1.0.0",
-  "description": "The library of basic functions for Puppeteer to start crawling fast.",
+  "description": "The library of basic functions that will help you to start crawling with [Puppeteer](https://github.com/puppeteer/puppeteer) fast.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node app.js",
