@@ -8,17 +8,17 @@
 
 | Title              | Description                                                |
 |--------------------|------------------------------------------------------------|
-| visit              | open the website by URL provided                           |
-| close              | close the browser                                          |
-| pageClose          | close current page                                         |
-| getXPath           | get the element by XPath provided                          |
-| getUrl             | get URL of current page                                    |
-| getElementProperty | get the property of html element by property name provided |
 | click              | click on the element by XPath provided                     |
+| close              | close the browser                                          |
+| delay              | wait for the `time in milliseconds` provided               |
+| extractItems       | get the array of elements out of XPath provided            |
+| getElementProperty | get the property of html element by property name provided |
+| getUrl             | get URL of current page                                    |
+| getXPath           | get the element by XPath provided                          |
 | goBack             | return to the previous the page                            |
 | ifElementPresent   | check if element is present on the page                    |
-| waitForPageLoad    | wait for page finished loading                             |
+| pageClose          | close current page                                         |
 | scrollViewport     | scroll to the element by XPath provided                    |
-| delay              | wait for the `time in miliseconds` provided                |
-| extractItems       | get the array of elements out of XPath provided            |
+| visit              | open the website by URL provided                           |
+| waitForPageLoad    | wait for page finished loading                             |
   
