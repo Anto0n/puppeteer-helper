@@ -1,17 +1,18 @@
 import PuppeteerHelper from './index';
 import puppeteer from 'puppeteer';
 
+// sample of config
 const defaultLaunchOptions = {
   headless: false,
 
   // most common display resolution
   defaultViewport: {
-    width: 1366,
-    height: 768,
+    width: 1280,
+    height: 1024,
   },
 
   args: [
-    '--window-size=1366,728', // 768 - 40 (default windows taskbar height)
+    '--window-size=1280,1080', // 40 (default windows taskbar height)
   ],
 
   pipe: true, // connect to browser via pipes instead of WebSockets, https://stackoverflow.com/questions/54922756/what-are-the-advantages-and-disadvantages-of-connecting-puppeteer-over-pipe-inst

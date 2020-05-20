@@ -19,6 +19,7 @@ const PROPERTY = {
 /**
  * Puppeteer helper class - helps to start crawling fast
  * @class
+ * @requires PUPPETEER: instance of browser
  * @constructor
  * @param {object} browser - The instance of browser
  */

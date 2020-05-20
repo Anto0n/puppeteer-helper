@@ -2,6 +2,50 @@
 
 `Puppeteer helper` - the library of basic functions that will help you to start crawling with [Puppeteer](https://github.com/puppeteer/puppeteer) fast!
 
+## Installation
+
+1. Clone the project
+
+	`git clone git@github.com:Anto0n/puppeteer-helper.git`
+
+2. Install the dependencies
+
+	`npm i`
+
+##  Usage example
+
+ ```
+  import PuppeteerHelper from './index';
+  import puppeteer from 'puppeteer';
+
+  // sample of config
+  const defaultLaunchOptions = {
+    headless: false,
+
+    // most common display resolution
+    defaultViewport: {
+      width: 1280,
+      height: 1024,
+    },
+
+    args: [
+      '--window-size=1280,1080', // 40 (default windows taskbar height)
+    ],
+
+    pipe: true, // connect to browser via pipes instead of WebSockets, https://stackoverflow.com/questions/54922756/what-are-the-advantages-and-disadvantages-of-connecting-puppeteer-over-pipe-inst
+  };
+
+  const run = async () => {
+    const browser = await puppeteer.launch(defaultLaunchOptions);
+    const puppeteerHelper = new PuppeteerHelper({ browser });
+    await puppeteerHelper.visit('https://google.com');
+    await puppeteerHelper.delay(5000);
+    await puppeteerHelper.close();
+  }
+
+  run();
+ ```
+
 ## Functions
 
 <dl>
