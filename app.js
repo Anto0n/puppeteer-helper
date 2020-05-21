@@ -12,10 +12,8 @@ const defaultLaunchOptions = {
   },
 
   args: [
-    '--window-size=1280,1080', // 40 (default windows taskbar height)
+    '--window-size=1280,984', // 40 (default windows taskbar height)
   ],
-
-  pipe: true, // connect to browser via pipes instead of WebSockets, https://stackoverflow.com/questions/54922756/what-are-the-advantages-and-disadvantages-of-connecting-puppeteer-over-pipe-inst
 };
 
 const run = async () => {
