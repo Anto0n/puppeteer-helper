@@ -6,92 +6,64 @@
 
 1. Clone the project
 
-	`git clone git@github.com:Anto0n/puppeteer-helper.git`
+   `git clone git@github.com:Anto0n/puppeteer-helper.git`
 
 2. Install the dependencies
 
-	`npm i`
+   `npm i`
 
-##  Usage example
+## Usage example
 
- ```
-  import PuppeteerHelper from './index';
-  import puppeteer from 'puppeteer';
+```
+ import PuppeteerHelper from './index';
+ import puppeteer from 'puppeteer';
 
-  // sample of config
-  const defaultLaunchOptions = {
-    headless: false,
+ // sample of config
+ const defaultLaunchOptions = {
+   headless: false,
 
-    // most common display resolution
-    defaultViewport: {
-      width: 1280,
-      height: 1024,
-    },
+   // most common display resolution
+   defaultViewport: {
+     width: 1280,
+     height: 1024,
+   },
 
-    args: [
-      '--window-size=1280,984',
-    ],
-  };
+   args: [
+     '--window-size=1280,984',
+   ],
+ };
 
-  const run = async () => {
-    const browser = await puppeteer.launch(defaultLaunchOptions);
-    const puppeteerHelper = new PuppeteerHelper({ browser });
-    await puppeteerHelper.visit('https://google.com');
-    await puppeteerHelper.delay(5000);
-    await puppeteerHelper.close();
-  }
+ const run = async () => {
+   const browser = await puppeteer.launch(defaultLaunchOptions);
+   const puppeteerHelper = new PuppeteerHelper({ browser });
+   await puppeteerHelper.visit('https://google.com');
+   await puppeteerHelper.delay(5000);
+   await puppeteerHelper.close();
+ }
 
-  run();
- ```
+ run();
+```
 
 ## Functions
 
-<dl>
-<dt><a href="#visit">visit()</a></dt>
-<dd><p>Go to website URL</p>
-</dd>
-<dt><a href="#close">close()</a></dt>
-<dd><p>Close the browser</p>
-</dd>
-<dt><a href="#pageClose">pageClose()</a></dt>
-<dd><p>Close current page</p>
-</dd>
-<dt><a href="#getXPath">getXPath()</a></dt>
-<dd><p>Get element by XPath provided</p>
-</dd>
-<dt><a href="#getText">getText()</a> ⇒ <code>string</code></dt>
-<dd><p>Get inner text of the target element</p>
-</dd>
-<dt><a href="#getUrl">getUrl()</a> ⇒ <code>string</code></dt>
-<dd><p>Get URL of the target element</p>
-</dd>
-<dt><a href="#getElementProperty">getElementProperty()</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#click">click()</a></dt>
-<dd><p>Clicks on the element by XPath selector provided</p>
-</dd>
-<dt><a href="#goBack">goBack()</a></dt>
-<dd><p>Returns to the previous page</p>
-</dd>
-<dt><a href="#ifElementPresent">ifElementPresent()</a> ⇒ <code>Boolean</code></dt>
-<dd><p>Checks if element is present</p>
-</dd>
-<dt><a href="#waitForElementToLoad">waitForElementToLoad()</a></dt>
-<dd><p>Checks if element is present</p>
-</dd>
-<dt><a href="#waitForPageLoad">waitForPageLoad()</a></dt>
-<dd><p>Checks if page is loaded</p>
-</dd>
-<dt><a href="#scrollViewport">scrollViewport()</a></dt>
-<dd><p>Scroll the page until element is present in the viewport</p>
-</dd>
-<dt><a href="#delay">delay()</a> ⇒ <code>Promise</code></dt>
-<dd><p>Suspend for specified time</p>
-</dd>
-<dt><a href="#extractItems">extractItems()</a> ⇒ <code>Array.&lt;Object&gt;</code></dt>
-<dd><p>Get array of elements out of target element (elementHandle object)</p>
-</dd>
-</dl>
+| Title                   | Description                                                |
+|-------------------------|-------------------------------------------------------------------------------------|
+| [click](#click)                               | Click on the element by XPath provided                             |
+| [close](#close)                               | Close the browser                                                  |
+| [delay](#delay)                               | Suspend for specified `time in milliseconds`                       |
+| [extractItems](#extractItems)                 | Get array of elements out of target element (elementHandle object) |
+| [getElementProperty](#getElementProperty)     | Get the property of html element by property name provided         |
+| [getUrl](#getUrl)                             | Get URL of the target element                                      |
+| [getText](#getText)                           | Get inner text of the target element                               |
+| [getXPath](#getXPath)                         | Get element by XPath provided                                      |
+| [goBack](#goBack)                             | Return to the previous the page                                    |
+| [ifElementPresent](#ifElementPresent)         | check if element is present on the page                            |
+| [pageClose](#pageClose)                       | Close current page                                                 |
+| [scrollViewport](scrollViewport)              | Scroll the page until element is present in the viewport           |
+| [visit](#visit)                               | Go to website URL                                                  |
+| [waitForElementToLoad](#waitForElementToLoad) | Checks if element is loaded                                        |
+| [waitForPageLoad](#waitForPageLoad)           | Checks if page is loaded                                           |
+
 
 <a name="PROPERTY"></a>
 
